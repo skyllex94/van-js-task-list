@@ -7,6 +7,7 @@ const taskInput = document.querySelector('#task');
 
 // Load All EventListeners
 loadEventListeners();
+// All Event to be pushed
 
 function loadEventListeners(){
     // Add Task Event
