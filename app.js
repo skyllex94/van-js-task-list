@@ -80,23 +80,6 @@ function getTasks(){
     }
 }
 
-/*
-for(let i=0; i<arrayOfValues.length; i++){
-    let arrayOfValues = new Array(Object.values(localStorage));
-
-    console.log(arrayOfValues);
-    let li = document.createElement('li');
-    li.className = 'collection-items';
-    li.textContent = arrayOfValues[i];
-    let link = document.createElement('a');
-    link.innerHTML = '<i class="fa fa-remove">X</i>';
-    li.appendChild(link);
-
-    taskList.appendChild(li);
-} 
-*/
-
-
 function removeTask(event){
     if(event.target.parentElement.classList.contains('delete-item')){
         if(confirm('Are you sure you want to remove this task?')){
