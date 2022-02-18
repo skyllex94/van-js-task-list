@@ -32,6 +32,32 @@ class UI {
         `;
     }
 
+    // Show User Repos
+    showRepos(repos){
+        let output = '';
+
+        repos.forEach(function(repo){
+            output += `
+            <div class="card card-body mb-2">
+                <div class="row">
+                    <div class="col md-6">
+                        <a href="${repo.html_url}" target="_blank">${repo.name}</a>
+                    </div>
+                    <div class="col md-6">
+                        <span class="badge badge-primary">Stars: ${repo.stargazers_count}</span>
+                        <span class="badge badge-secondary">Watchers: ${repo.watchers_count}</span>
+                        <span class="badge badge-success">Forks: ${repo.fork_count}</span>
+                    </div>
+                </div>
+            </div>
+            `;
+        })
+
+        // Output repos
+        document.getElementById('repos').innerText = output;
+
+    }
+
     // Show an alert in case there is no user with the appointed name
     showAlert(message, className){
         // Clear any remaining alerts before creating one

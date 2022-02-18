@@ -21,7 +21,7 @@ searchUser.addEventListener('keyup', (e) => {
             } else {
                 // Realize the fetched data in the UI
                 ui.showProfile(data.profile);
-
+                ui.showRepos(data.repos);
             }
         })
     } else {
